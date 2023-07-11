@@ -310,7 +310,8 @@ ol li{
 
 .tab-titles{
   display: flex;
-  margin: 10px 0 10px;
+  margin-bottom:5px;
+  
 }
 
 
@@ -341,12 +342,17 @@ ol li{
 .tab-contents ul li{
   list-style: none;
   margin-bottom:5px;
-  
+  margin-top:0;
 
 }
 
+tab-contents-list ul li{
+  margin-top:0;
+}
+
 .tab-contents ul{
-  padding:0;
+  padding-left:0px;
+  padding-top:1px;
 }
 
 .tab-contents ul li span{
@@ -359,6 +365,8 @@ ol li{
 .tab-contents{
   display: none;
   font-size: 20px;
+  padding:0;
+
   
 
 }
@@ -366,31 +374,45 @@ ol li{
   display:block;
 
 }
+
+
+
 #portfolio{
-  padding:50px 0;
+  padding-top: 0;
   background:url(images/bg.png);
+  text-align: center;
 
-
-
+}
+.sub-title{
+  margin-top:50px;
 }
 .work-list{
   margin-top:50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.skills-list{
+  margin:0px;
+  margin-top:0;
 }
 
 .work{
   border-radius: 10px;
   position: relative;
   overflow:hidden;
-  width: 440px;
-  height: 300px;
+  width: 300px;
+  height:320px;
   margin:10px;
+  object-fit: cover;
 
 }
 
 .work img{
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: 10px;
   display: block;
   transition: transform 0.5s;
@@ -465,7 +487,7 @@ ol li{
 
 .btn{
 
-  display: block;
+  display: inline-block;
   margin: 50px auto;
   width: fit-content;
   border:1px solid var(--base-color);
@@ -473,7 +495,7 @@ ol li{
   border-radius: 6px;
   text-decoration: none;
   color:var(--secondary-color);
-  transition: background 0.5s;
+  transition: background 0.5s ease;
   text-align: center;
 
 }
@@ -578,20 +600,25 @@ form .btn-2{
 .to-top{
   background-color: var(--base-color);
   position: fixed;
-  bottom:16px;
+  bottom:20px;
+  right:20px;
   width: 100px;
   height: 100px;
   right: 32px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
+  display: none;
+  position: fixed;
+  align-items:center;
   justify-content: center;
   font-size: 32px;
   color:#000;
+  z-index: 99;
   text-decoration: none;
   opacity: 0;
+  font-size: 20px;
   pointer-events: none;
   transition: all 0.5s;
+  background-color: #d2d2d2;
 }
 
 .to-top.active{
