@@ -1,26 +1,22 @@
-const sections=document.querySelectorAll(".section");
-const sectBtns=document.querySelectorAll(".controls");
-const sectBtn=document.querySelectorAll(".control");
-const allSections=document.querySelector(".main-content");
+var typed=new Typed (".auto-input", {
+    strings:["Ave", "Ave Arak"],
+    typeSpeed:100,
+    backSpeed:100,
+    loop:true
+})
 
-function PageTransitions(){
-    for (let i=0; i< sectBtn.lengh; i++){
-        sectBtn[i].addEventListener("click",function(){
-            let currentBtn=document.querySelectorAll(".active-btn");
-            currentBtn[0].className=currentBtn[0].className.replace("active-btn",".");
-            this.className+="active-btn";
-        })
+var tablinks=document.getElementsByClassName("tab-links");
+var tabcontents=document.getElementsByClassName("tab-contents");
 
-        
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
     }
-
-    //sections active class
-    allSections.addEventListener("click",(e)=>{
-        const id
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
     }
-        
-    });
-
-
+    
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
 }
-PageTransitions()
+
