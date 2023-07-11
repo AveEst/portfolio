@@ -108,7 +108,7 @@ nav{
 }
 
 .logo{
-  width: 100px;
+  width: 125px;
   margin-left:0;
 
 }
@@ -124,7 +124,7 @@ nav ul li{
 nav ul li a{
   text-decoration: none;
   color:var(--heading-color);
-  font-size: 18px;
+  font-size: 20px;
   position: relative;
   
 }
@@ -150,20 +150,27 @@ nav ul li a:hover::after{
   overflow:hidden;
   position: relative;
   background-position:center center;
-  padding-top:100px;
+  padding-top:50px;
+  text-align: left;
+  padding:20px 0;
  
 
 }
 
 .hero-info h1{
   font-size: var(--h1-size);
-  margin:10px 0;
+  margin-bottom: 10px;
+  margin-top:0;
   
 }
 
 .hero-info h3{
   font-family: var(--base-font);
   font-size: var(--h3-size);
+  margin-bottom:10px;
+}
+.hero-info p{
+  font-family: var(--base-font);
 }
 
 
@@ -220,7 +227,6 @@ nav ul li a:hover::after{
 
 }
 
-
 .col-2{
   width: 48%;
 }
@@ -235,8 +241,9 @@ nav ul li a:hover::after{
 
 
 #about{
-  padding:80px 0;
+  padding-top:0px;
   color:var(--secondary-color);
+  text-align: left;
 }
 
 .row{
@@ -263,25 +270,54 @@ nav ul li a:hover::after{
 .sub-title{
   font-size: var(--h1-size);
   font-weight: 600;
-  color:var(--base-color)
+  color:var(--base-color);
+  font-family: var(--base-font);
+  margin-bottom:10px;
+
 }
 
 .hire-reasons{
   font-size: var(--h3-size);
-  color: var(--secondary-color);
-  font-weight: 500;
+  font-family: var(--base-font);
+  line-height:normal;
+  
 }
+
+.hire-reasons-text-p{
+    font-family: var(--base-font);
+    font-size: 18px;
+    margin-bottom:5px;
+    
+}
+
+
+ol{
+  list-style-type: decimal;
+  padding-left:18px;
+  margin-bottom:5px;
+}
+
+
+ol li{
+  
+  font-size: 18px;
+  font-family: var(--base-font);
+  line-height: normal;
+  margin-bottom:5px;
+  
+}
+
 
 .tab-titles{
   display: flex;
-  margin: 20px 0 40px;
+  margin: 10px 0 10px;
 }
 
 
 .tab-links{
   margin-right: 50px;
   font-size: 20px;
-  font-weight:500 ;
+  font-weight:600 ;
   cursor: pointer;
   position: relative;
 }
@@ -304,7 +340,7 @@ nav ul li a:hover::after{
 
 .tab-contents ul li{
   list-style: none;
-  margin-left:10px 0;
+  margin-bottom:5px;
   
 
 }
@@ -543,8 +579,8 @@ form .btn-2{
   background-color: var(--base-color);
   position: fixed;
   bottom:16px;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   right: 32px;
   border-radius: 50%;
   display: flex;
