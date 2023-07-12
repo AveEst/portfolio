@@ -19,3 +19,27 @@ function opentab(tabname){
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab");
 }
+
+window.onscroll = function() {
+    showBackToTopButton();
+  };
+  
+  function showBackToTopButton() {
+    var backToTopButton = document.getElementById("backToTopBtn");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      backToTopButton.classList.add("show");
+    } else {
+      backToTopButton.classList.remove("show");
+    }
+  }
+  
+  function scrollToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+  }
+ 
+  
+  
+  
+  
+  

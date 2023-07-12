@@ -47,6 +47,8 @@ body{
   padding:22px 0;
   z-index: 1000;
   border-bottom: 1px solid #d2d2d2;
+
+
   
 }
 
@@ -418,8 +420,17 @@ tab-contents-list ul li{
   transition: transform 0.5s;
   position: absolute;
   
-  
 
+}
+
+.work img::hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 0 10px 5px var(--base-color);
 }
 
 .layer{
@@ -512,9 +523,6 @@ tab-contents-list ul li{
   flex-basis: 60%;
 }
 
-.contact-left p{
-  margin-top: 30px;
-}
 .contact-left p i{
   color:#b469eb;
   margin-right: 15px;
@@ -540,13 +548,20 @@ tab-contents-list ul li{
 }
 
 .btn.btn-2{
+
 display: inline-block;
-background:#b469eb;
-font-size: 18px;
+background:var(--base-color);
+font-size: 20px;
+font-weight: 500;
+}
+
+.btn.btn-2:hover{
+  background: lightgray;
 }
 
 .contact-right form{
   width: 100%;
+  margin-top: 50px;
 
 
 }
@@ -557,7 +572,7 @@ form input, form textarea{
   width: 100%;
   border: 0;
   outline: none;
-  background: lightgrey;
+  background: lightgray;
   padding:15px;
   margin:15px 0;
   color:var(--secondary-color);
@@ -569,9 +584,12 @@ form input, form textarea{
 
 form .btn-2{
   padding:14px 60px;
-  font-size: 18px;
+  font-size: 20px;
   margin-top: 20px;
   cursor: pointer;
+  font-weight: 900;
+  font-size: 20px;
+  
 }
 
 .copyright{
@@ -585,7 +603,7 @@ form .btn-2{
 }
 
 .copyright i{
-  color:#b469eb;
+  color:var(--base-color);
 
 }
 #copyright{
@@ -597,36 +615,22 @@ form .btn-2{
   display: block;
 }
 
-.to-top{
-  background-color: var(--base-color);
-  position: fixed;
-  bottom:20px;
-  right:20px;
-  width: 100px;
-  height: 100px;
-  right: 32px;
-  border-radius: 50%;
+#backToTopBtn {
   display: none;
   position: fixed;
-  align-items:center;
-  justify-content: center;
-  font-size: 32px;
-  color:#000;
-  z-index: 99;
-  text-decoration: none;
-  opacity: 0;
-  font-size: 20px;
-  pointer-events: none;
-  transition: all 0.5s;
-  background-color: #d2d2d2;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: lightgray;
+  color: var(--base-color);
+  border: none;
+  cursor: pointer;
 }
 
-.to-top.active{
-  bottom:32px;
-  pointer-events: auto;
-  opacity: 1;
-
-
+#backToTopBtn.show {
+  display: block;
 }
 
 @media only screen and (max-width: 768px){
