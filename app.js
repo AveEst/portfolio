@@ -38,8 +38,33 @@ window.onscroll = function() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
   }
  
-  
-  
-  
-  
-  
+
+// Select the elements
+const workListContainer = document.querySelector(".work-list");
+const seeMoreBtn = document.getElementById("see-more-btn");
+
+// Set the initial number of items to show
+let visibleItemCount = 3;
+
+// Hide items beyond the initial visible count
+const workItems = Array.from(workListContainer.querySelectorAll(".work"));
+workItems.slice(visibleItemCount).forEach((item) => {
+  item.style.display = "none";
+});
+
+// Add event listener to the "See More" button
+seeMoreBtn.addEventListener("click", () => {
+    event.preventDefault(); // Prevent scrolling to the top
+  // Show the next three items
+  workItems.slice(visibleItemCount, visibleItemCount + 3).forEach((item) => {
+    item.style.display = "block";
+  });
+
+  // Update the visible item count
+  visibleItemCount += 3;
+
+  // Hide the "See More" button if all items are visible
+  if (visibleItemCount >= workItems.length) {
+    seeMoreBtn.style.display = "none";
+  }
+});
